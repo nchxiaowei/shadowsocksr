@@ -1,8 +1,8 @@
 #!/bin/sh -e
 
 sudo su
-git clone https://github.com/nchxiaowei/shadowsocksr.git
-cd shadowsocksr/
+#git clone https://github.com/nchxiaowei/shadowsocksr.git
+#cd shadowsocksr/
 chmod 777 bbr
 sh bbr
 
