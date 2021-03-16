@@ -1,15 +1,14 @@
-#!/bin/sh -e
-
-sudo su
+#!/bin/sh
+#sudo su
 #git clone https://github.com/nchxiaowei/shadowsocksr.git
 #cd shadowsocksr/
+dirpath=$(cd `dirname $0`;pwd)
+
 chmod 777 bbr
 sh bbr
-
-cp rc.local /etc/
+cp -f rc.local /etc/
 chmod +x /etc/rc.local
-cp rc-local.service /etc/systemd/system/
+cp -f rc-local.service /etc/systemd/system/
 systemctl enable rc-local.service
-
 reboot
 echo succ
